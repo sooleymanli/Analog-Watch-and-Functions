@@ -4,6 +4,9 @@
  1. [Demo](https://fuadsuleymanli.xyz/Demos/watch) 
  2. [Demo (Codepen)](https://codepen.io/fuads062/pen/JjEyGzL)
 
+###
+![ScreenShot](screenshot.gif)
+
 ## Functions
 1. Analog Watch
 2. Digital Watch
@@ -16,6 +19,6 @@
 9. Night Mode
 
 
-![ScreenShot](screenshot.gif)
+
 
 
