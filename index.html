@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clock</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div class="clock">
+        <div class="digital-main">
+            <span class="logo">The Suleymanovs</span>
+            <div class="digital">
+                <span class="time">
+                    <span class="digital-hours"></span>
+                    <span class="digital-sec"></span></span>
+                <span class="week"> </span>
+                <span class="day"></span>
+            </div>
+            <div class="digital-alarm"><i class="fas fa-bell alarm-icon"></i>
+                <div class="alarm-time">00:00</div>
+            </div>
+
+        </div>
+
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+
+    <div class="function">
+        <button class="night" title="Night"><i class="fas fa-moon"></i></button>
+        <button class="alarm-stop"><i class="far fa-stop-circle"></i> Dayandır</button>
+        <button class="alarm">Alarm Qur</button>
+        <button class="secun">Saniyə ölçən</button>
+        <button class="secundametr">Geri Sayım</button>
+     </div>
+
+    <div class="alarm-form-body">
+        <div class="close">X</div>
+        <div class="alarm-body">
+            <h2>Saatı ayarlayın:</h2>
+            <input type="time" name="time" id="times">
+            <select name="audio" id="audioselect">
+                <option selected disabled value="">Audio Fayl Seçin</option>
+                <option value="Alarm">Səs 1 </option>
+                <option value="Alarm2">Səs 2</option>
+                <option value="Alarm3">Səs 3</option>
+            </select>
+            <div class="sound-play-pause">
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+            </div>
+            <div class="buttons">
+                <input type="submit" class="apply" value="Hazırdır">
+                <input type="reset" value="Sıfırla" id="alarmReset">
+            </div>
+            <span class="alert-time"></span>
+            <span class="alert-sound"></span>
+
+
+        </div>
+    </div>
+
+    <div class="timeout-body">
+        <div class="timeout-close">X</div>
+        <div class="timeout-main-body">
+            <h2>Vaxt Seçin:</h2>
+            <input type="time" name="time" id="secondbackvalue" value="">
+            <div class="buttons-timeout">
+                <input type="submit" class="apply-timeout" value="Başla">
+                <input type="reset" value="Sıfırla" id="stopSecundBack">
+            </div>
+            <h2 id="total"></h2>
+            <span class="alert-time-back"></span>
+        </div>
+    </div>
+
+    <div class="timer-body">
+        <div class="timer-close">X</div>
+        <div class="timer-main-body">
+            <div class="timer-inner">
+                <div class="clock-timer">
+                    <div class="dot"></div>
+
+                    <div class="mint">
+                        <div class="mnt" id="mnt"></div>
+                    </div>
+                    <div class="sect">
+                        <div class="sct" id="sct"></div>
+                    </div>
+                </div>
+
+                <span id="total-timer">00:00:00</span>
+                <div class="buttons-timer">
+                    <input type="submit" class="apply-timer" value="Başla">
+                    <input type="submit" class="apply-timer-add" value="Əlavə et">
+
+                    <input type="reset" value="Sıfırla" id="stoptimer">
+
+                </div>
+                <input type="button" value="Sıyahını Boşalt" id="resetList">
+            </div>
+            <div class="timer-for-list">
+                <div id="ul"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <audio id="audio" src=""></audio>
+    <audio id="audio-seconds" src="audio/seconds.mp3"></audio>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
+
