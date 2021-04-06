@@ -16,6 +16,6 @@
 9. Night Mode
 
 
-![SreenShot](img/screenshot.gif)
+![ScreenShot](screenshot.gif)
 
 
