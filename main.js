@@ -137,7 +137,7 @@ nightBtn.addEventListener("click", () => {
 
     else if (document.body.style.backgroundColor == "black") {
         document.body.style.backgroundColor = "white";
-        clockBody.style.backgroundColor = "blanchedalmond";
+        clockBody.style.backgroundColor = "white";
         nightBtn.innerHTML = '<i class="fas fa-moon"></i>'
         digitalAlarmBackground.style.backgroundColor = ""
         digitalAlarmBackground.style.color = ""
