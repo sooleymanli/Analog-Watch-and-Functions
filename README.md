@@ -1,4 +1,4 @@
-# Analog-Watch-and-Functions
+# Analog-Watch-and-Functions (Pure Java Script)
 
  ### 
  1. [Demo](https://fuadsuleymanli.xyz/Demos/watch) 
