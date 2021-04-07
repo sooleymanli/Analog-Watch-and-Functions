@@ -52,7 +52,7 @@ let newUl, mainUl, toStringText, i, sct, mns, saniye, millisaniye, timerMilliSec
 
 
 
-
+// Working principle 
 setInterval(() => {
     let day = new Date();
     let hh = day.getHours() * 30;
@@ -123,6 +123,7 @@ setInterval(() => {
 
 })
 
+// Night Mode
 nightBtn.addEventListener("click", () => {
     if (obj.cssText == "") {
         obj.cssText = "background-color:black";
@@ -159,6 +160,7 @@ nightBtn.addEventListener("click", () => {
 
 })
 
+// Click to Alarm Button
 alarmBtn.addEventListener("click", () => {
     alarmBody.style.visibility = "visible"
     alarMainBody.style.animation = "fadeIn ease 2s;"
@@ -167,18 +169,19 @@ alarmBtn.addEventListener("click", () => {
 
 })
 
+// Click to Alarm Close Button
 closeBtn.addEventListener("click", () => {
     alarmBody.style.visibility = "hidden"
     alarMainBody.style.animation = "slideup ease 2s;"
 
 })
 
-
+// Choose Alarm Audio
 alarmSoundValue.addEventListener("change", () => {
-    console.log(alarmSoundValue.value)
     audio.src = `audio/${alarmSoundValue.value}.WAV`
 })
 
+// Click to Play Button for Alarm Audio
 playSound.addEventListener("click", () => {
     if (alarmSoundValue.value == "") {
         alertSound.innerHTML = "* Səs faylı seçin.."
@@ -188,11 +191,14 @@ playSound.addEventListener("click", () => {
     audio.play()
 
 })
+
+// Click to Stop Button for Alarm Audio
 pauseSound.addEventListener("click", () => {
     audio.pause()
     audio.currentTime = 0
 })
 
+// Alarm is Ready
 applyBtn.addEventListener("click", () => {
     if (alarmTime.value == "") {
         alertTime.innerHTML = "* Zaman seçin.."
@@ -206,7 +212,6 @@ applyBtn.addEventListener("click", () => {
         alarmTime.disabled = true
         alarmSoundValue.disabled = true
         alarmTimeBir = alarmTime.value
-        console.log(alarmTimeBir)
         newHours = alarmTimeBir.slice(0, 2);
         newMinute = alarmTimeBir.slice(3, 5)
         newTime = new Date()
@@ -236,6 +241,8 @@ applyBtn.addEventListener("click", () => {
     }
 
 })
+
+// Click to Reset Button for Alarm
 alarmReset.addEventListener("click", () => {
     alarmTime.value = ""
     alarmSoundValue.value = 'header'
@@ -244,16 +251,17 @@ alarmReset.addEventListener("click", () => {
 
 })
 
+// Alarm Working principle 
 setInterval(() => {
     if (digHh == newHours && digMm == newMinute && digSs == 1) {
         audio.loop = true;
-
         audio.play()
         alarmStop.style.display = "block"
         document.body.className = "body-animation"
     }
 }, 1000)
 
+// Click to Alarm Stop Button
 alarmStop.addEventListener("click", () => {
     digalarm.innerHTML = alarmIcon.innerHTML + " " + "00:00"
     alarmIcon.style.color = "black"
@@ -268,19 +276,23 @@ alarmStop.addEventListener("click", () => {
 
 })
 
+// Click to Secundamer Button 
 secondBackBtn.addEventListener("click", () => {
     secondBackPopupBody.style.visibility = "visible"
 })
 
+// Click to Secundamer Close Button 
 secondclosePopupBtn.addEventListener("click", () => {
     secondBackPopupBody.style.visibility = "hidden"
 })
 
+// Choose Secundamer Time
 secondBackInputValue.addEventListener("change", () => {
     let secondBackInputValueTwo = secondBackInputValue.value
     secondBackResultNumber.innerHTML = secondBackInputValueTwo
 })
 
+// Start Secundamer
 secondBackStartBtn.addEventListener("click", () => {
     if (secondBackInputValue.value == "") {
         alertTimeBack.innerHTML = "* Zaman seçin.."
@@ -322,6 +334,7 @@ secondBackStartBtn.addEventListener("click", () => {
 })
 
 
+// Secundamer Finish
 setInterval(() => {
     if (newSecundss == 0 && newMinutess == 0) {
         audioSeconds.pause()
@@ -331,7 +344,7 @@ setInterval(() => {
 }, 1000)
 
 
-
+// Click to Secundamer Stop Button
 stopSecundBackBtn.addEventListener("click", () => {
 
     secondBackInputValue.disabled = false
@@ -343,11 +356,14 @@ stopSecundBackBtn.addEventListener("click", () => {
 });
 
 
+// Click to Timer Button 
 timerPopupShowBtn.addEventListener("click", () => {
     timerBody.style.visibility = "visible"
     timerImg.style.visibility = "visible"
 
 })
+
+// Click to Timer Close Button 
 timerClose.addEventListener("click", () => {
     timerBody.style.visibility = "hidden"
     timerImg.style.visibility = "hidden"
@@ -355,7 +371,7 @@ timerClose.addEventListener("click", () => {
 
 })
 
-
+// Click to Start Timer Button
 timerStart.addEventListener("click", () => {
     timerTotal = document.querySelector("#total-timer")
     timerSecunds = 00
@@ -430,6 +446,8 @@ timerStart.addEventListener("click", () => {
 
 })
 
+
+// Click to Stop Timer Button
 timerStopBtn.addEventListener("click", () => {
     clearInterval(timerStartProces);
     timerMinute = 0
@@ -444,6 +462,7 @@ timerStopBtn.addEventListener("click", () => {
 })
 
 
+// Add to List Time of Timer
 timerAddBtn.addEventListener("click", () => {
     timerMainBody.style.width = "80%"
     timerList.style.display = "block"
@@ -461,9 +480,9 @@ timerAddBtn.addEventListener("click", () => {
 
 })
 
+// Click to Timer List Reset Button
 listReset.addEventListener("click", () => {
     timerLitsKomponent = []
-    console.log(timerLitsKomponent)
     newUl.parentNode.removeChild(newUl)
     timerMainBody.style.width = "600px"
     listReset.style.display = "none"
