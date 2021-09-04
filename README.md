@@ -1,7 +1,7 @@
 # Analog-Watch-and-Functions (Pure Java Script)
 
  ### 
- 1. [Demo](https://fuadsuleymanli.xyz/Demos/watch) 
+ 1. [Demo](https://fuadsuleymanli.com/Demos/watch) 
  2. [Demo (Codepen.io)](https://codepen.io/sooleymanli/pen/JjEyGzL?editors=0110L)
  3. [Demo (Github.io)](https://sooleymanli.github.io/Analog-Watch-and-Functions/)
 
