@@ -2,7 +2,8 @@
 
  ### 
  1. [Demo](https://fuadsuleymanli.xyz/Demos/watch) 
- 2. [Demo (Codepen)](https://codepen.io/fuads062/pen/JjEyGzL)
+ 2. [Demo (Codepen)](https://codepen.io/sooleymanli/pen/JjEyGzL?editors=0110L)
+ 3. [Demo (Github.io)](https://sooleymanli.github.io/Analog-Watch-and-Functions/)
 
 ###
 ![ScreenShot](screenshot.gif)
